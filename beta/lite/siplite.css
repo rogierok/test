@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --light: #FFFFFF;
+    --dark:  #0C0C0C;
+    
+    --auto-bg: #0C0C0C;
+    --auto-txt: #FFFFFF;
+    
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+    --auto-bg: #F7F7F7;
+    --auto-txt: #0C0C0C;
+    }
+}
+
+body.dark {background-color: var(--dark);}
+body.dark > p,body.dark > h1,body.dark > h2,body.dark > h3,body.dark > h4,body.dark > h5,body.dark > h6 {color: var(--light)}
+body.light {background-color: var(--light);}
+body.light > p,body.light > h1,body.light > h2,body.light > h3,body.light > h4,body.light > h5,body.light > h6 {color: var(--dark)}
+body.auto {background-color: var(--auto-bg); color: var(--auto-txt)}
+
+body.text-left, div.text-center  {text-align: left;}
+body.text-center, div.text-center{text-align: center;}
+body.text-right, div.text-right  {text-align: right;}
+
+h1                              {font-size: 24px; margin-bottom: 24px;}
+h2                              {font-size: 32px; margin-bottom: 32px;}
+h3                              {font-size: 40px; margin-bottom: 32px;}
+h4                              {font-size: 48px; margin-bottom: 32px;}
+h5                              {font-size: 56px; margin-bottom: 40px;}
+h6                              {font-size: 64px; margin-bottom: 48px;}
+
+h1,h2,h3,h4,h5,h6,p             {line-height:110%;}
+
+p.-four                         {font-size: 10px;} 
+p.-tree                         {font-size: 12px;}
+p.-two                          {font-size: 14px;}
+p.-one                          {font-size: 16px;}
+p                               {font-size: 18px;}
+p.one                           {font-size: 20px;}
+p.two                           {font-size: 22px;}
+p.tree                          {font-size: 24px;}
+p.four                          {font-size: 26px;}
+p                               {margin-bottom: 16px;}
+
+p~a                             {font-size: inherit;}
+h1~a,h2~a,h3~a,h4~a,h5~a,h6~a   {font-size: inherit;}
